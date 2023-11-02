@@ -1,0 +1,6 @@
+id: mzvua1thzdiyjtohaew4ll6bftieqxw09xnmgq986zhmvkck
+name: iso-3166-countrys
+main: mod.zig
+license: 0BSD
+description: ISO 3166 Country Codes
+dependencies:

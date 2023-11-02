@@ -1,0 +1,37 @@
+#! /usr/bin/env nix-shell
+/*
+#! nix-shell -i node -p nodejs
+*/
+
+const fs = require("fs");
+
+const code2s = new Map();
+const code3s = new Map();
+let data = "";
+
+// TODO: find a better source for this
+fetch('https://ftp.iana.org/tz/tzdb-2016g/iso3166.tab').then(response => response.text()).then(text => {
+    // console.log(text);
+
+    const list = text.split('\n').filter(x => !x.startsWith('#')).filter(x => x.length > 0);
+    // console.log(list);
+
+    data += '//! ISO 3166 Codes for the Representation of Names of Countries\n';
+    data += '\n';
+
+    data += 'pub const Alpha2Code = enum {\n';
+    for (const item of list) {
+        const element = item.split('\t');
+        data += `    ${element[0]}, // ${element[1]}\n`;
+    }
+    data += '};\n';
+
+    // data += '\n';
+    // data += 'pub const Alpha3Code = enum {\n';
+    // for (const item of list) {
+    //     data += `    ${item.d[166]}, // ${item.d[148]}\n`;
+    // }
+    // data += '};\n';
+
+    fs.writeFileSync('mod.zig', data);
+})
