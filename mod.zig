@@ -44,7 +44,7 @@ pub const Alpha2Code = enum {
     CF, // Central African Rep.
     CG, // Congo (Rep.)
     CH, // Switzerland
-    CI, // Côte d'Ivoire
+    CI, // Côte d’Ivoire
     CK, // Cook Islands
     CL, // Chile
     CM, // Cameroon
@@ -53,7 +53,7 @@ pub const Alpha2Code = enum {
     CR, // Costa Rica
     CU, // Cuba
     CV, // Cape Verde
-    CW, // Curacao
+    CW, // Curaçao
     CX, // Christmas Island
     CY, // Cyprus
     CZ, // Czech Republic
@@ -144,7 +144,7 @@ pub const Alpha2Code = enum {
     MF, // St Martin (French)
     MG, // Madagascar
     MH, // Marshall Islands
-    MK, // Macedonia
+    MK, // North Macedonia
     ML, // Mali
     MM, // Myanmar (Burma)
     MN, // Mongolia
@@ -213,10 +213,10 @@ pub const Alpha2Code = enum {
     SV, // El Salvador
     SX, // St Maarten (Dutch)
     SY, // Syria
-    SZ, // Swaziland
+    SZ, // Eswatini (Swaziland)
     TC, // Turks & Caicos Is
     TD, // Chad
-    TF, // French Southern & Antarctic Lands
+    TF, // French S. Terr.
     TG, // Togo
     TH, // Thailand
     TJ, // Tajikistan

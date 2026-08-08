@@ -9,8 +9,7 @@ const code2s = new Map();
 const code3s = new Map();
 let data = "";
 
-// TODO: find a better source for this
-fetch('https://ftp.iana.org/tz/tzdb-2016g/iso3166.tab').then(response => response.text()).then(text => {
+fetch('https://ftp.iana.org/tz/tzdb/iso3166.tab').then(response => response.text()).then(text => {
     // console.log(text);
 
     const list = text.split('\n').filter(x => !x.startsWith('#')).filter(x => x.length > 0);
