@@ -250,4 +250,7 @@ pub const Alpha2Code = enum {
     ZA, // South Africa
     ZM, // Zambia
     ZW, // Zimbabwe
+
+    pub const BaseType = []const u8;
+    pub const default: @This() = .US;
 };

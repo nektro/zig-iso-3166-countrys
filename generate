@@ -23,6 +23,9 @@ fetch('https://ftp.iana.org/tz/tzdb/iso3166.tab').then(response => response.text
         const element = item.split('\t');
         data += `    ${element[0]}, // ${element[1]}\n`;
     }
+    data += '\n';
+    data += '    pub const BaseType = []const u8;\n';
+    data += '    pub const default: @This() = .US;\n'
     data += '};\n';
 
     // data += '\n';
